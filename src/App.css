@@ -1,0 +1,85 @@
+* {
+    padding: 0px ;
+    margin: 0px ;
+    
+}
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+    background-color: white    !important;
+}
+
+.zen-btn {
+    background-color: #C9A26B;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border:none;
+    transition:  0.4s ease;
+}
+.zen-btn:hover {
+    background-color: black;
+    color:#C9A26B;
+    animation: 400ms;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border:none
+}
+
+.z-head {
+    font-size: 2rem !important;
+    font-family: Roboto, sans-demo;
+    line-height: 1em;
+    font-weight: 400;
+}
+
+.hover-brown:hover {
+    color: #C9A26B !important;
+    cursor: pointer ;
+}
+
+/* Pagination */
+/* pagination.css */
+.pagination {
+    margin-top: 20px;
+    display: inline-block;
+  }
+  
+  .page-link {
+    color: #C9A26B !important;
+    background-color: transparent;
+    border: 1px solid #C9A26B;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    transition: background-color 0.3s, color 0.3s;
+    outline: none; /* Remove focus outline */
+  }
+  
+  .page-link:hover {
+    color: #8b6e41;
+    background-color: #d1b074;
+    border-color: #8b6e41;
+  }
+  
+  .page-item.disabled .page-link {
+    opacity: 0.5;
+  }
+  
+  .page-item.active .page-link {
+    color: white !important;
+    background-color: #C9A26B;
+    border-color: #C9A26B;
+  }
+  .page-link:focus{
+    box-shadow: none !important;
+    outline: none; /* Removes the focus outline */
+    /* Or, change the color and style of the outline */
+    outline: 2px solid red;
+    background: none;
+  }
+
+  .cart-btn {
+    background-color:#C9A26B !important;
+    padding: 0.6rem 0.8rem;
+    border:none;
+    border-radius: 20px;
+  }

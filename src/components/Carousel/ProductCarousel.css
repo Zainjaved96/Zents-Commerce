@@ -1,0 +1,18 @@
+.card {
+border: 1px solid #ddd;
+}
+
+.card-img-container {
+overflow: hidden;
+}
+
+.card-img-container > img {
+    align-items: center;
+    color: #c9c9c9;
+    display: flex;
+    font-weight: 700;
+    height: 100%;
+    justify-content: center;
+    text-transform: uppercase;
+    width: 100%;
+}

@@ -1,0 +1,5 @@
+@media (max-width: 800px) {
+    .brand-card {
+        width: 10rem !important;
+    }
+}

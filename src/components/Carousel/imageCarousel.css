@@ -1,0 +1,19 @@
+.carousel-indicators [data-bs-target] {
+  background-color : #C9A26B !important;
+}
+
+
+@media screen and (min-width: 1200px) {
+  .zen-carousal {
+    height: 297px;
+    width: 848px;
+  }
+ 
+}
+@media screen and (min-width: 1000) and ( max-width:1200px) {
+  .zen-carousal {
+    height: 297px;
+    width: 700px;
+  }
+ 
+}
