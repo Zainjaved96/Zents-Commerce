@@ -9,6 +9,7 @@ import store from "./Redux/store.js";
 import ProductListingPage from "./pages/ProductListingPage.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import { initializeApp } from './Redux/appActions'; // Import your initialization action
+import ProductCategory from "./pages/ProductCategory.jsx";
 
 // store.dispatch(initializeApp());
 const router = createBrowserRouter([
@@ -22,6 +23,8 @@ const router = createBrowserRouter([
   },
   { path: "/product/:id", 
   element: <ProductDetail /> },
+  { path: "/category/:category_name", 
+  element: <ProductCategory /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

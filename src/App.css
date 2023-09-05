@@ -83,3 +83,13 @@ body {
     border:none;
     border-radius: 20px;
   }
+
+  /* Drop downs styling */
+
+  .dropdown-menu {
+    --bs-dropdown-link-active-bg:none !important;
+  }
+
+  .dropdown-toggle  {
+    color:white !important;
+  }

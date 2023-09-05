@@ -5,40 +5,39 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Badge } from "react-bootstrap";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { AiOutlineUser } from "react-icons/ai";
-function BasicExample() {
+import { Link } from "react-router-dom";
+
+function Header() {
   return (
-    <Navbar expand="lg" className="bg-dark navbar-dark py-3">
+    <Navbar expand="lg" style={{'background':'#3A210D'}} className=" navbar-dark py-3">
       <Container>
-        <Navbar.Brand href="/">ZenCommerce</Navbar.Brand>
+        <Link className="navbar-brand col-9 col-md-5" to="/"><img src={"/src/assets/images/logos/zen-logo.png"} width="40%" /></Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto ms-auto">
-            <Nav.Link className="pe-3 hover-brown" href="/products">Products</Nav.Link>
-            <Nav.Link className="pe-3 hover-brown" href="#link">About Us</Nav.Link>
-            <NavDropdown className="pe-3 hover-brown bg-dark " title="Categories" id="basic-nav-dropdown">
-              <NavDropdown.Item  className="hover-brown bg-dark text-white"   href="#action/3.1">Jackets</NavDropdown.Item>
-              <NavDropdown.Item  className="hover-brown bg-dark text-white"  href="#action/3.2">Sweatshirts</NavDropdown.Item >
-              <NavDropdown.Item className="hover-brown bg-dark text-white" href="#action/3.3">Suits</NavDropdown.Item>
-              <NavDropdown.Item className="hover-brown bg-dark text-white" href="#action/3.3">T-shirts</NavDropdown.Item>
-              <NavDropdown.Item className="hover-brown bg-dark text-white" href="#action/3.3">Jeans</NavDropdown.Item>
-              <NavDropdown.Item className="hover-brown bg-dark text-white" href="#action/3.3">Kurta</NavDropdown.Item>
+          <Nav className="me-auto ms-auto " >
+          <Link to="/products" className="pe-3 nav-link  hover-brown text-white"  >Products</Link>
+            <Link className="pe-3 hover-brown text-white nav-link nav-link" to="#link">About Us</Link>
+            <NavDropdown className="pe-3 hover-brown text-white" style={{'background':'#3A210D'}} title="Shop" id="basic-nav-dropdown">
+              <Link  className="hover-brown text-dark dropdown-item"   to="/category/jackets">Jackets</Link>
+              <Link  className="hover-brown text-dark dropdown-item"  to="/category/sweatshirts">Sweatshirts</Link >
+              <Link className="hover-brown text-dark dropdown-item" to="/category/suit">Suits</Link>
+              <Link className="hover-brown text-dark dropdown-item" to="/category/shirts">Shirts</Link>
+              <Link className="hover-brown text-dark dropdown-item" to="/category/jeans">Jeans</Link>
+              <Link className="hover-brown text-dark dropdown-item" to="/category/kurta">Kurta</Link>
               
             </NavDropdown>
-            <Nav.Link className="pe-3" href="#link">Return Policy</Nav.Link>
-            <Nav.Link className="pe-3" href="#link">Contact Us</Nav.Link>
+            <Link className="pe-3 text-white hover-brown nav-link" to="#link">Return Policy</Link>
+            <Link className="pe-3 text-white hover-brown nav-link" to="#link">Contact Us</Link>
           </Nav>
         </Navbar.Collapse>
-        <div className="d-flex align-items-center d-none d-lg-flex">
+        <div className="d-flex align-items-center gap-3 d-none d-lg-flex">
       <div className="position-relative me-1" style={{"cursor":"pointer"}}>
-        <HiOutlineShoppingCart style={{ width: "50px", height: "26px", color:"white" }} />
-        <div className="position-absolute top-0 end-0 translate-middle badge rounded-circle bg-danger">
-          3
-        </div>
+      <i class="fa-solid fa-cart-shopping text-white"></i>
+        
       </div>
       <div className="position-relative nav-user  " style={{"cursor":"pointer"}}>
-        <AiOutlineUser style={{ width: "50px", height: "26px", color:"white" }} />
-        {/* Add the user's notification badge here */}
+      <i class="fa-solid fa-user text-white"></i>        {/* Add the user's notification badge here */}
       </div>
     </div>
       </Container>
@@ -46,4 +45,4 @@ function BasicExample() {
   );
 }
 
-export default BasicExample;
+export default Header;

@@ -4,10 +4,11 @@ import { setProducts } from "/src/Redux/ProductSlice.js";
 import ProductCard from "../components/Listing/ProductCard";
 import  Header  from '/src/components/Navbar/Header';
 import Footer from "../components/Footer/Footer";
-
-function ProductListingPage() {
+import { useParams } from "react-router-dom";
+function ProductCategory() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.product.products);
+  const {category_name} = useParams()
   console.log(products)
   // State for managing pagination
   const [currentPage, setCurrentPage] = useState(1);
@@ -15,7 +16,7 @@ function ProductListingPage() {
 
   useEffect(() => {
     // Fetch products for the current page
-    fetch(`http://127.0.0.1:8000/products/all?page=${currentPage}`)
+    fetch(`http://127.0.0.1:8000/products/product/${category_name}/?page=${currentPage}`)
       .then((response) => response.json())
       .then((data) => {
         dispatch(setProducts(data.results)); // Update with actual product data field
@@ -24,7 +25,7 @@ function ProductListingPage() {
         setTotalPages(Math.ceil(data.count / 30)); // Assuming each page shows 30 products
       });
 
-  }, [dispatch, currentPage]);
+  }, [dispatch, currentPage,category_name]);
 
   const handlePageChange = (page) => {
     if (page >= 1 && page <= totalPages) {
@@ -42,12 +43,15 @@ function ProductListingPage() {
           <li class="breadcrumb-item active" aria-current="page">
             Products
           </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {category_name}
+          </li>
         </ol>
       </nav>
-     {/* Pagination */}
-     <div className="row">
-      <nav className="col-lg-10" aria-label="Page navigation example">
-        <ul className="pagination text-center flex-wrap">
+      {/* Pagination */}
+      <div className="row">
+      <nav className="" aria-label="Page navigation example">
+        <ul className="pagination flex-wrap text-center">
           <li className={`page-item ${currentPage === 1 ? "disabled" : ""}`}>
             <a
               className="page-link"
@@ -89,6 +93,7 @@ function ProductListingPage() {
         </ul>
       </nav>
       </div>
+      
       {/* Products Listing */}
       <div className="product-cards-container px-lg-0 px-2">
         {/* Use the return statement here */}
@@ -110,4 +115,4 @@ function ProductListingPage() {
   );
 }
 
-export default ProductListingPage;
+export default ProductCategory;
