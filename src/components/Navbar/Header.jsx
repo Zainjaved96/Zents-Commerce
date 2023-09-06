@@ -27,8 +27,7 @@ function Header() {
               <Link className="hover-brown text-dark dropdown-item" to="/category/kurta">Kurta</Link>
               
             </NavDropdown>
-            <Link className="pe-3 text-white hover-brown nav-link" to="#link">Return Policy</Link>
-            <Link className="pe-3 text-white hover-brown nav-link" to="#link">Contact Us</Link>
+            <Link className="pe-3 text-white hover-brown nav-link" to="/contact">Contact Us</Link>
           </Nav>
         </Navbar.Collapse>
         <div className="d-flex align-items-center gap-3 d-none d-lg-flex">

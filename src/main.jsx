@@ -10,6 +10,8 @@ import ProductListingPage from "./pages/ProductListingPage.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 import { initializeApp } from './Redux/appActions'; // Import your initialization action
 import ProductCategory from "./pages/ProductCategory.jsx";
+import Contact from "./pages/Contact.jsx";
+import ThankYou from "./pages/ThankYou.jsx";
 
 // store.dispatch(initializeApp());
 const router = createBrowserRouter([
@@ -24,7 +26,11 @@ const router = createBrowserRouter([
   { path: "/product/:id", 
   element: <ProductDetail /> },
   { path: "/category/:category_name", 
-  element: <ProductCategory /> }
+  element: <ProductCategory /> },
+  { path: "/contact", 
+  element: <Contact /> },
+  { path: "/thank-you", 
+  element: <ThankYou /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
