@@ -1,6 +1,7 @@
 import React from 'react'
 import './jumbotron.css'
 import {BiSolidRightArrowCircle} from "react-icons/bi"
+import { Link } from 'react-router-dom'
 const Jumbotron = ({subhead,head,jumboImg,imgSize}) => { 
   return (
     <div className="container px-md-0 py-5"  >
@@ -9,9 +10,11 @@ const Jumbotron = ({subhead,head,jumboImg,imgSize}) => {
             <p className='fw-bold hero-subhead text-center text-md-start fs-4 pb-0 mb-0' style={{color:"#C9A26B"}}>{subhead}</p>
             <h1 className='fw-bold  hero-head'>{head}</h1>
             <div>
+            <Link>
             <button className="zen-btn gap-1">Shop Now &nbsp; 
             <BiSolidRightArrowCircle style={{color:"black"}} />
             </button>
+            </Link>
 
             </div>
         </div>
