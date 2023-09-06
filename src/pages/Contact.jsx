@@ -25,8 +25,8 @@ const Contact = () => {
   return (
     <>
       <Header />
-      <div className="container py-5 my-5">
-        <form onSubmit={formik.handleSubmit} className="col-lg-10 mx-auto py-5">
+      <div className="px-3 row py-5 my-5">
+        <form onSubmit={formik.handleSubmit} className="col-lg-6 mx-auto py-5">
           <div className="mb-3">
             <label htmlFor="exampleFormControlInput1" className="form-label">
               Email address
@@ -69,6 +69,9 @@ const Contact = () => {
             Submit
           </button>
         </form>
+        <div className="col-lg-6 text-center mx-auto"> 
+          <img className="rounded" width={"90%"} src={"https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"} alt="contact image" />
+        </div>
       </div>
       <Footer />
     </>

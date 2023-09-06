@@ -12,6 +12,7 @@ import { initializeApp } from './Redux/appActions'; // Import your initializatio
 import ProductCategory from "./pages/ProductCategory.jsx";
 import Contact from "./pages/Contact.jsx";
 import ThankYou from "./pages/ThankYou.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
 
 // store.dispatch(initializeApp());
 const router = createBrowserRouter([
@@ -30,7 +31,9 @@ const router = createBrowserRouter([
   { path: "/contact", 
   element: <Contact /> },
   { path: "/thank-you", 
-  element: <ThankYou /> }
+  element: <ThankYou /> },
+  { path: "/about-us", 
+  element: <AboutUs /> }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

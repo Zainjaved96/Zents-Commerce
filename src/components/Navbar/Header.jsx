@@ -17,7 +17,7 @@ function Header() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto ms-auto " >
           <Link to="/products" className="pe-3 nav-link  hover-brown text-white"  >Products</Link>
-            <Link className="pe-3 hover-brown text-white nav-link nav-link" to="#link">About Us</Link>
+            <Link className="pe-3 hover-brown text-white nav-link nav-link" to="/about-us">About Us</Link>
             <NavDropdown className="pe-3 hover-brown text-white" style={{'background':'#3A210D'}} title="Shop" id="basic-nav-dropdown">
               <Link  className="hover-brown text-dark dropdown-item"   to="/category/jackets">Jackets</Link>
               <Link  className="hover-brown text-dark dropdown-item"  to="/category/sweatshirts">Sweatshirts</Link >
