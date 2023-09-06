@@ -5,7 +5,7 @@ import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const navigate = useNavigate(); // Use the useNavigate hook to navigate to different pages
+  const navigate = useNavigate(); 
 
   const formik = useFormik({
     initialValues: {
@@ -14,10 +14,6 @@ const Contact = () => {
       message: '',
     },
     onSubmit: values => {
-      // Perform any necessary form submission logic here
-      // You can send the data to your backend or handle it as needed
-
-      // After successful submission, navigate to the thank you page
       navigate('/thank-you');
     },
   });
